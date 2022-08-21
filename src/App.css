@@ -43,7 +43,7 @@ nav{
   padding: 3px 20px;
   align-items: center;
   font-size: 30px;
-  position: sticky;
+  position: static;
 }
 ul{
   width: 100%;
