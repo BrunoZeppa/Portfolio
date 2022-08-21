@@ -253,6 +253,8 @@ img{
   gap: 15px;
   justify-content: center;
   margin-top: 40px;
+  z-index: 9;
+  position: relative;
 }
 .social-media a:hover{
   color: white;
