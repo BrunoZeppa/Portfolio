@@ -67,7 +67,6 @@ a:hover{
 main{
   height: 90vh;
   overflow-y: scroll;
-  
   align-items: center;
 }
 header{
@@ -246,8 +245,9 @@ img{
   text-align: center;
   line-height: 27px;
 }
-.social-media{
+.slmd{
   color: white;
+  width: 200px;
   display: flex;
   font-size: 34px;
   gap: 15px;
@@ -255,9 +255,10 @@ img{
   margin-top: 40px;
   z-index: 9;
   position: relative;
+  border: #00E6F6 solid .3px;
 
 }
-.social-media a:hover{
+.slmd a:hover{
   color: white;
   text-shadow: 0 0 0.05em #fff, 0 0 0.2em #00E6F6, 0 0 0.3em #00E6F6;
 }

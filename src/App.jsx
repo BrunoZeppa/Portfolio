@@ -124,7 +124,7 @@ function App() {
               <p>
                 {changeLanguage ? "I am passionate about developing, creating and innovating and everything related to technology. I am a cheerful and ambitious man of continuous learning. I enjoy solving problems and working in team." : "Me apasiona desarrollar, crear e innovar y todo lo relacionado con la tecnología. Soy un hombre alegre y ambicioso de continuo aprendizaje. Disfruto resolviendo problemas y trabajando en equipo."}
               </p>
-              <div className='social-media'>
+              <div className='slmd'>
                 <a href="https://github.com/BrunoZeppa"><b><i className="fa-brands fa-github"></i></b></a>
                 <a href="https://www.linkedin.com/in/brunozeppa/"><b><i className="fa-brands fa-linkedin"></i></b></a>
               </div>
