@@ -43,6 +43,7 @@ nav{
   padding: 3px 20px;
   align-items: center;
   font-size: 30px;
+  position: sticky;
 }
 ul{
   width: 100%;
@@ -257,7 +258,6 @@ img{
   position: relative;
   margin-left: auto;
   margin-right: auto;
-
 }
 .slmd a:hover{
   color: white;
