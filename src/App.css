@@ -248,14 +248,15 @@ img{
 .slmd{
   color: white;
   width: 200px;
-  display: flex;
+  display: flex !important;
   font-size: 34px;
   gap: 15px;
   justify-content: center;
   margin-top: 40px;
   z-index: 9;
   position: relative;
-  border: #00E6F6 solid .3px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 .slmd a:hover{
