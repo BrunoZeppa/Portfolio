@@ -67,7 +67,7 @@ a:hover{
 main{
   height: 90vh;
   overflow-y: scroll;
-  overflow-x: hidden;
+  
   align-items: center;
 }
 header{
@@ -255,6 +255,7 @@ img{
   margin-top: 40px;
   z-index: 9;
   position: relative;
+
 }
 .social-media a:hover{
   color: white;
