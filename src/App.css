@@ -1,4 +1,6 @@
-
+body, html, main{
+  scroll-behavior: smooth;
+}
 *{
   box-sizing: border-box;
   padding: 0;
