@@ -129,7 +129,7 @@ function App() {
 
         <div className='skills-about-wrap'>
 
-          <section className='about-me' id='aboutMe' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "" : "#222222" }}>
+          <section className='about-me' id='aboutMe' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "" }}>
             <div className='about-me-container'>
               <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "About Me" : "Acerca de Mi"}</h3>
               <p style={{ color: lightMode ? "#222222" : "" }}>
