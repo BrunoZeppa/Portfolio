@@ -1,7 +1,7 @@
 import './App.css'
-import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg } from "./images";
+import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg, WhiteMode } from "./images";
 import { useState } from 'react';
-import { BrunoZeppaEngCv, BrunoZeppaEspCv} from "./documents";
+import { BrunoZeppaEngCv, BrunoZeppaEspCv } from "./documents";
 
 
 
@@ -11,6 +11,7 @@ import { BrunoZeppaEngCv, BrunoZeppaEspCv} from "./documents";
 
 function App() {
 
+  const [lightMode, setLightMode] = useState(false)
   const [currentImage, setCurrentImage] = useState(1);
   const [info, setInfo] = useState("react")
   const [changeLanguage, setChangeLanguage] = useState(false)
@@ -78,12 +79,19 @@ function App() {
     }
   }
 
+  const themeToggler = () => {
+    if (lightMode == false) {
+      return true
+    } else if (lightMode == true) {
+      return false
+    }
+  }
 
 
 
   return (
     <div className="App">
-      <nav>
+      <nav style={{ backgroundColor: lightMode ? "#222222" : "", color: lightMode ? "white" : "" }}>
         <ul>
           <li><a href="#home"><i className="fa-solid fa-house"></i> <strong className='nav-text-desktop'>{changeLanguage ? "Home" : "Inicio"}</strong></a></li>
           <li><a href="#aboutMe"><i className="fa-solid fa-folder-open"></i> <strong className='nav-text-desktop'>{changeLanguage ? "About me" : "Acerca de mi"}</strong></a></li>
@@ -95,83 +103,86 @@ function App() {
       <main>
 
 
-        <header id="home">
-          <div className='language-container'>
-            <img src={SpainFlag} alt="" onClick={() => setChangeLanguage(false)} />
-            <img src={UKFlag} alt="" onClick={() => setChangeLanguage(true)} />
+        <header id="home" style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "#e8e9e9" : "#222222" }}>
+          <div className='setings-container'>
+            <button onClick={() => setLightMode(themeToggler)} style={{ backgroundColor: lightMode ? "" : "#222222", color: lightMode ? "" : "white" }}>{lightMode ? <i className="fa-solid fa-moon"></i> : <i className="fa-solid fa-sun"></i>}</button>
+            <div className='language-container'>
+              <img src={SpainFlag} alt="" onClick={() => setChangeLanguage(false)} />
+              <img src={UKFlag} alt="" onClick={() => setChangeLanguage(true)} />
+            </div>
           </div>
           <div className='banner-container-info'>
             <div className='circle-photo'></div>
             <div>
-              <h1>BRUNO ZEPPA</h1>
-              <h2>FULL STACK DEV JR.</h2>
+              <h1 style={{ color: lightMode ? "#222222" : "" }}>BRUNO ZEPPA</h1>
+              <h2 style={{ color: lightMode ? "#222222" : "" }}>FULL STACK DEV JR.</h2>
             </div>
           </div>
           <a className='cv-button' href={changeCv()} download={changeCvTitle()}>
             <p>{changeLanguage ? "download my Cv" : "descarga mi CV"}</p>
             <img src={Rocket} className="rocket" alt="" />
           </a>
-          <span className='span1' style={{color: "#222222"}}>.</span>
-          <span className='span2' style={{color: "#222222"}}>.</span>
+          <span className='span1' style={{ color: "#222222" }}>.</span>
+          <span className='span2' style={{ color: "#222222" }}>.</span>
         </header>
 
 
         <div className='skills-about-wrap'>
 
-          <section className='about-me' id='aboutMe'>
+          <section className='about-me' id='aboutMe' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "" : "#222222" }}>
             <div className='about-me-container'>
-              <h3>{changeLanguage ? "About Me" : "Acerca de Mi"}</h3>
-              <p>
+              <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "About Me" : "Acerca de Mi"}</h3>
+              <p style={{ color: lightMode ? "#222222" : "" }}>
                 {changeLanguage ? "I am passionate about developing, creating and innovating and everything related to technology. I am a cheerful and ambitious man of continuous learning. I enjoy solving problems and working in team." : "Me apasiona desarrollar, crear e innovar y todo lo relacionado con la tecnología. Soy un hombre alegre y ambicioso de continuo aprendizaje. Disfruto resolviendo problemas y trabajando en equipo."}
               </p>
               <div className='slmd'>
-                <a href="https://github.com/BrunoZeppa"><b><i className="fa-brands fa-github"></i></b></a>
-                <a href="https://www.linkedin.com/in/brunozeppa/"><b><i className="fa-brands fa-linkedin"></i></b></a>
+                <a href="https://github.com/BrunoZeppa"><b style={{ color: lightMode ? "#222222" : "" }}><i className="fa-brands fa-github"></i></b></a>
+                <a href="https://www.linkedin.com/in/brunozeppa/"><b style={{ color: lightMode ? "#222222" : "" }}><i className="fa-brands fa-linkedin"></i></b></a>
               </div>
             </div>
-            <span className='span5' style={{color: "#222222"}}>.</span>
-            <span className='span6' style={{color: "#222222"}}>.</span>
+            <span className='span5' style={{ color: "#222222" }}>.</span>
+            <span className='span6' style={{ color: "#222222" }}>.</span>
           </section>
 
-          <section className='skills' id='skills'>
+          <section className='skills' id='skills' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "" : "#222222" }}>
             <div className='skills-container'>
-              <h3>{changeLanguage ? "Skills" : "Habilidades"}</h3>
+              <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "Skills" : "Habilidades"}</h3>
               <div className='technologies-wrap'>
                 <div>
                   <img src={HTMLImg} style={{ borderLeft: "#e44d26 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>HTML</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>HTML</h6>
                 </div>
                 <div>
                   <img src={CSSImg} style={{ borderLeft: "#2062af 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>CSS</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>CSS</h6>
                 </div>
                 <div>
                   <img src={JSImg} style={{ borderLeft: "#ffd600 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>JavaScript</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>JavaScript</h6>
                 </div>
                 <div>
                   <img src={ReactImg} style={{ borderLeft: "#00d8ff 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>React.js</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>React.js</h6>
                 </div>
                 <div>
                   <img src={ReduxImg} style={{ borderLeft: "#7e57c2 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>Redux</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>Redux</h6>
                 </div>
                 <div>
                   <img src={bootstrapImg} style={{ borderLeft: "#653ab3 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>Boostrap</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>Boostrap</h6>
                 </div>
                 <div>
                   <img src={NodeImg} style={{ borderLeft: "#8cc84b 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>Node.js</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>Node.js</h6>
                 </div>
                 <div>
                   <img src={MaterialUImg} style={{ borderLeft: "#29b6f6 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>Material UI</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>Material UI</h6>
                 </div>
                 <div>
                   <img src={MySQLImg} style={{ borderLeft: "#00668d 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6>My SQL</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>My SQL</h6>
                 </div>
               </div>
             </div>
@@ -180,11 +191,11 @@ function App() {
 
         {/*---------------------------------------------- */}
 
-        <section className='portfolio' id='portfolio'>
-          <span className='span3' style={{color: "#222222"}}>.</span>
-          <span className='span4' style={{color: "#222222"}}>.</span>
+        <section className='portfolio' id='portfolio' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "" : "#222222" }}>
+          <span className='span3' style={{ color: "#222222" }}>.</span>
+          <span className='span4' style={{ color: "#222222" }}>.</span>
           <div className='portfolio-main-container'>
-            <h3>{changeLanguage ? "Portfolio" : "Portafolio"}</h3>
+            <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "Portfolio" : "Portafolio"}</h3>
             <div className='portfolio-options-container'>
               <button onClick={() => {
                 setInfo("react")
@@ -246,18 +257,18 @@ function App() {
           </div>
         </section>
 
-        <section className='contact' id='contact'>
+        <section className='contact' id='contact' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "" : "#222222" }}>
           <span className='span1'>.</span>
           <span className='span2'>.</span>
           <div className='contact-container'>
-            <h3>{changeLanguage ? "Contact" : "Contacto"}</h3>
+            <h3 style={{ color: lightMode ? "#222222" : "" }}>{changeLanguage ? "Contact" : "Contacto"}</h3>
             <form action="https://formsubmit.co/be424ab82a522da618b6569779be4ab0 " method="post">
               <input type="text" placeholder={changeLanguage ? "NAME" : "NOMBRE"} name="name" required />
               <input type="email" placeholder={changeLanguage ? "EMAIL" : "CORREO"} name="email" required />
 
               <input type="text" placeholder={changeLanguage ? "WRITE HERE" : "ESCRIBE AQUÍ"} id="mensaje-mail" name="message" required />
               <br />
-              <button type='submit' className='send-btn'>
+              <button type='submit' className='send-btn' style={{ backgroundColor: lightMode ? "#e8e9e9" : "", color: lightMode ? "#222222" : "" }}>
                 <span></span>
                 <span></span>
                 <span></span>
