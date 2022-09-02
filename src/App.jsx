@@ -2,6 +2,9 @@ import './App.css'
 import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg, WhiteMode } from "./images";
 import { useState } from 'react';
 import { BrunoZeppaEngCv, BrunoZeppaEspCv } from "./documents";
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
 
 
 
@@ -38,6 +41,8 @@ function App() {
       return "Bruno Zeppa CV ESP"
     }
   }
+
+
 
 
 
@@ -86,6 +91,30 @@ function App() {
       return false
     }
   }
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_cqr6mca', 'template_o2p9zfs', form.current, 'kEyUcrFm61DdnxY1n')
+    e.target.reset()
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: changeLanguage ? 'Your message has been delivered' : 'tu mensaje ha sido entregado',
+      showConfirmButton: false,
+      timer: 1700
+    })
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
+
 
 
 
@@ -262,7 +291,7 @@ function App() {
           <span className='span2'>.</span>
           <div className='contact-container'>
             <h3 style={{ color: lightMode ? "#222222" : "" }}>{changeLanguage ? "Contact" : "Contacto"}</h3>
-            <form action="https://formsubmit.co/be424ab82a522da618b6569779be4ab0 " method="post">
+            <form ref={form} onSubmit={sendEmail}>
               <input type="text" placeholder={changeLanguage ? "NAME" : "NOMBRE"} name="name" required />
               <input type="email" placeholder={changeLanguage ? "EMAIL" : "CORREO"} name="email" required />
 

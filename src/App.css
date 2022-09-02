@@ -1102,6 +1102,11 @@ input {
     background-repeat: no-repeat;
   }
 
+  .skills-container {
+    max-height: 370px;
+    overflow-y: unset;
+  }
+
   .portfolio {
     width: 100vw;
     height: 84vh;
