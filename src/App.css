@@ -76,6 +76,14 @@ a:hover {
   display: none;
 }
 
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6 {
+  display: none;
+}
 
 main {
   height: 90vh;
@@ -833,6 +841,15 @@ input {
     display: flex;
     align-items: flex-start;
 
+  }
+
+  .span1,
+  .span2,
+  .span3,
+  .span4,
+  .span5,
+  .span6 {
+    display: block;
   }
 
   ul {

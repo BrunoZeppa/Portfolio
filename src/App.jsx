@@ -152,8 +152,8 @@ function App() {
             <p>{changeLanguage ? "download my Cv" : "descarga mi CV"}</p>
             <img src={Rocket} className="rocket" alt="" />
           </a>
-          <span className='span1' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " media screen and (min-width: 599px){ linear-gradient(90deg, #9fa0a5 , #f2f2f2) }" : "" }}>.</span>
-          <span className='span2' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "lmedia screen and (min-width: 599px){ linear-gradient(90deg, #9fa0a5 , #f2f2f2) }" : "" }}>.</span>
+          <span className='span1' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
+          <span className='span2' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
         </header>
 
 
@@ -170,8 +170,8 @@ function App() {
                 <a href="https://www.linkedin.com/in/brunozeppa/"><b style={{ color: lightMode ? "#222222" : "" }}><i className="fa-brands fa-linkedin"></i></b></a>
               </div>
             </div>
-            <span className='span5' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #f2f2f2, #9fa0a5 )" : "" }}>.</span>
-            <span className='span6' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #f2f2f2, #9fa0a5 )" : "" }}>.</span>
+            <span className='span5' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #f2f2f2, #9fa0a5) " : "" }}>.</span>
+            <span className='span6' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #f2f2f2, #9fa0a5) " : "" }}>.</span>
           </section>
 
           <section className='skills' id='skills' style={{ backgroundImage: lightMode ? "unset" : "", backgroundColor: lightMode ? "#fff" : "#222222" }}>
@@ -222,8 +222,8 @@ function App() {
         {/*---------------------------------------------- */}
 
         <section className='portfolio' id='portfolio' style={{ backgroundImage: lightMode ? "unset" : "", backgroundColor: lightMode ? "#fff" : "#222222" }}>
-          <span className='span3' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #f2f2f2, #9fa0a5 )" : "" }}>.</span>
-          <span className='span4' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #f2f2f2, #9fa0a5 )" : "" }}>.</span>
+          <span className='span3' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #f2f2f2, #9fa0a5) " : "" }}>.</span>
+          <span className='span4' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #f2f2f2, #9fa0a5) " : "" }}>.</span>
           <div className='portfolio-main-container'>
             <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "Portfolio" : "Portafolio"}</h3>
             <div className='portfolio-options-container'>
@@ -288,8 +288,8 @@ function App() {
         </section>
 
         <section className='contact' id='contact' style={{ backgroundImage: lightMode ? "unset" : "", backgroundColor: lightMode ? "" : "#222222" }}>
-          <span className='span1' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
-          <span className='span2' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
+          <span className='span1' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
+          <span className='span2' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
           <div className='contact-container'>
             <h3 style={{ color: lightMode ? "#222222" : "" }}>{changeLanguage ? "Contact" : "Contacto"}</h3>
             <form ref={form} onSubmit={sendEmail}>
