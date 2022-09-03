@@ -1,5 +1,5 @@
 import './App.css'
-import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg, WhiteMode } from "./images";
+import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg, ProfilePhoto2 } from "./images";
 import { useState } from 'react';
 import { BrunoZeppaEngCv, BrunoZeppaEspCv } from "./documents";
 import { useRef } from 'react';
@@ -23,7 +23,8 @@ function App() {
 
   const listStyles = {
     width: `${100 * 4}%`,
-    transform: `translateX(-${(currentImage - 1) * percent}%)`
+    transform: `translateX(-${(currentImage - 1) * percent}%)`,
+    background: lightMode ? "radial-gradient(circle at center, cyan, #fff)" : " "
   }
 
   const changeCv = () => {
@@ -132,7 +133,7 @@ function App() {
       <main>
 
 
-        <header id="home" style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "#e8e9e9" : "#222222" }}>
+        <header id="home" style={{ backgroundImage: lightMode ? "unset" : "", backgroundColor: lightMode ? "#fff" : "#222222" }}>
           <div className='setings-container'>
             <button onClick={() => setLightMode(themeToggler)} style={{ backgroundColor: lightMode ? "" : "#222222", color: lightMode ? "" : "white" }}>{lightMode ? <i className="fa-solid fa-moon"></i> : <i className="fa-solid fa-sun"></i>}</button>
             <div className='language-container'>
@@ -141,7 +142,7 @@ function App() {
             </div>
           </div>
           <div className='banner-container-info'>
-            <div className='circle-photo'></div>
+            <div className='circle-photo' style={{ backgroundImage: lightMode ? `url( ${ProfilePhoto2} )` : "" }}></div>
             <div>
               <h1 style={{ color: lightMode ? "#222222" : "" }}>BRUNO ZEPPA</h1>
               <h2 style={{ color: lightMode ? "#222222" : "" }}>FULL STACK DEV JR.</h2>
@@ -151,14 +152,14 @@ function App() {
             <p>{changeLanguage ? "download my Cv" : "descarga mi CV"}</p>
             <img src={Rocket} className="rocket" alt="" />
           </a>
-          <span className='span1' style={{ color: "#222222" }}>.</span>
-          <span className='span2' style={{ color: "#222222" }}>.</span>
+          <span className='span1' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " media screen and (min-width: 599px){ linear-gradient(90deg, #9fa0a5 , #f2f2f2) }" : "" }}>.</span>
+          <span className='span2' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "lmedia screen and (min-width: 599px){ linear-gradient(90deg, #9fa0a5 , #f2f2f2) }" : "" }}>.</span>
         </header>
 
 
         <div className='skills-about-wrap'>
 
-          <section className='about-me' id='aboutMe' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "" }}>
+          <section className='about-me' id='aboutMe' style={{ backgroundImage: lightMode ? "unset" : "", backgroundColor: lightMode ? "#fff" : "#222222" }}>
             <div className='about-me-container'>
               <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "About Me" : "Acerca de Mi"}</h3>
               <p style={{ color: lightMode ? "#222222" : "" }}>
@@ -169,11 +170,11 @@ function App() {
                 <a href="https://www.linkedin.com/in/brunozeppa/"><b style={{ color: lightMode ? "#222222" : "" }}><i className="fa-brands fa-linkedin"></i></b></a>
               </div>
             </div>
-            <span className='span5' style={{ color: "#222222" }}>.</span>
-            <span className='span6' style={{ color: "#222222" }}>.</span>
+            <span className='span5' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #f2f2f2, #9fa0a5 )" : "" }}>.</span>
+            <span className='span6' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #f2f2f2, #9fa0a5 )" : "" }}>.</span>
           </section>
 
-          <section className='skills' id='skills' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "" : "#222222" }}>
+          <section className='skills' id='skills' style={{ backgroundImage: lightMode ? "unset" : "", backgroundColor: lightMode ? "#fff" : "#222222" }}>
             <div className='skills-container'>
               <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "Skills" : "Habilidades"}</h3>
               <div className='technologies-wrap'>
@@ -220,9 +221,9 @@ function App() {
 
         {/*---------------------------------------------- */}
 
-        <section className='portfolio' id='portfolio' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "" : "#222222" }}>
-          <span className='span3' style={{ color: "#222222" }}>.</span>
-          <span className='span4' style={{ color: "#222222" }}>.</span>
+        <section className='portfolio' id='portfolio' style={{ backgroundImage: lightMode ? "unset" : "", backgroundColor: lightMode ? "#fff" : "#222222" }}>
+          <span className='span3' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #f2f2f2, #9fa0a5 )" : "" }}>.</span>
+          <span className='span4' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #f2f2f2, #9fa0a5 )" : "" }}>.</span>
           <div className='portfolio-main-container'>
             <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "Portfolio" : "Portafolio"}</h3>
             <div className='portfolio-options-container'>
@@ -286,18 +287,18 @@ function App() {
           </div>
         </section>
 
-        <section className='contact' id='contact' style={{ backgroundImage: lightMode ? `url(${WhiteMode})` : "", backgroundColor: lightMode ? "" : "#222222" }}>
-          <span className='span1'>.</span>
-          <span className='span2'>.</span>
+        <section className='contact' id='contact' style={{ backgroundImage: lightMode ? "unset" : "", backgroundColor: lightMode ? "" : "#222222" }}>
+          <span className='span1' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
+          <span className='span2' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? "linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
           <div className='contact-container'>
             <h3 style={{ color: lightMode ? "#222222" : "" }}>{changeLanguage ? "Contact" : "Contacto"}</h3>
             <form ref={form} onSubmit={sendEmail}>
-              <input type="text" placeholder={changeLanguage ? "NAME" : "NOMBRE"} name="name" required />
-              <input type="email" placeholder={changeLanguage ? "EMAIL" : "CORREO"} name="email" required />
+              <input type="text" placeholder={changeLanguage ? "NAME" : "NOMBRE"} style={{ backgroundColor: lightMode ? "#222222" : "", color: lightMode ? "white" : "" }} name="name" required />
+              <input type="email" placeholder={changeLanguage ? "EMAIL" : "CORREO"} style={{ backgroundColor: lightMode ? "#222222" : "", color: lightMode ? "#fff" : "" }} name="email" required />
 
-              <input type="text" placeholder={changeLanguage ? "WRITE HERE" : "ESCRIBE AQUÍ"} id="mensaje-mail" name="message" required />
+              <input type="text" placeholder={changeLanguage ? "WRITE HERE" : "ESCRIBE AQUÍ"} id="mensaje-mail" style={{ backgroundColor: lightMode ? "#222222" : "", color: lightMode ? "#fff" : "" }} name="message" required />
               <br />
-              <button type='submit' className='send-btn' style={{ backgroundColor: lightMode ? "#e8e9e9" : "", color: lightMode ? "#222222" : "" }}>
+              <button type='submit' className='send-btn' style={{ backgroundColor: lightMode ? "#222222" : "", color: lightMode ? "#fff" : "" }}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -307,8 +308,8 @@ function App() {
             </form>
           </div>
         </section>
-      </main>
-    </div>
+      </main >
+    </div >
   )
 }
 
