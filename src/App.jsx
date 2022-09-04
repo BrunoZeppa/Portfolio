@@ -1,5 +1,5 @@
 import './App.css'
-import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg, ProfilePhoto2 } from "./images";
+import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg } from "./images";
 import { useState } from 'react';
 import { BrunoZeppaEngCv, BrunoZeppaEspCv } from "./documents";
 import { useRef } from 'react';
@@ -142,7 +142,7 @@ function App() {
             </div>
           </div>
           <div className='banner-container-info'>
-            <div className='circle-photo' style={{ backgroundImage: lightMode ? `url( ${ProfilePhoto2} )` : "" }}></div>
+            <div className='circle-photo'></div>
             <div>
               <h1 style={{ color: lightMode ? "#222222" : "" }}>BRUNO ZEPPA</h1>
               <h2 style={{ color: lightMode ? "#222222" : "" }}>FULL STACK DEV JR.</h2>
