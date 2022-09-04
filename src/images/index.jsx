@@ -18,4 +18,4 @@ export { default as SpainFlag } from './spain.svg';
 export { default as UKFlag } from './uk.svg';
 export { default as Rocket } from './rocket.svg';
 export { default as ComingSoonEngImg } from './coming-soon-eng.png';
-export { default as ProfilePhoto2 } from './profileImg2.jpg';
+export { default as ProfilePhoto2 } from './profile-img2.jpg';
