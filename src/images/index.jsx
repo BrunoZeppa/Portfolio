@@ -6,7 +6,7 @@ export { default as MaterialUImg } from './material-ui-image.svg';
 export { default as NodeImg } from './node-image.svg';
 export { default as bootstrapImg } from './bootstrap-image.svg';
 export { default as ReduxImg } from './redux-image.svg';
-export { default as MySQLImg } from './my-sql-image.svg';
+export { default as MySQLImg } from './my-sql-image.png';
 export { default as RickMortyImg } from './rick-morty-image.png';
 export { default as PokedexImg } from './pokedex-image.png';
 export { default as CRUDImg } from './crud-image.png';

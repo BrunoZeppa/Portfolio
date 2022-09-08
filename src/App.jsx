@@ -9,9 +9,6 @@ import Swal from 'sweetalert2';
 
 
 
-
-
-
 function App() {
 
   const [lightMode, setLightMode] = useState(false)
@@ -63,7 +60,7 @@ function App() {
       return (
         <>
           <ul className="images-list" style={listStyles}>
-            <li> <a href="https://www.trainify.com.mx"><img src={TrainifyImg} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
+            <li> <a href="https://trainifymx.netlify.app/"><img src={TrainifyImg} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
@@ -212,7 +209,7 @@ function App() {
                 </div>
                 <div>
                   <img src={MySQLImg} style={{ borderLeft: "#00668d 7px solid", paddingLeft: "10px" }} alt="" />
-                  <h6 style={{ color: lightMode ? "#222222" : "" }}>My SQL</h6>
+                  <h6 style={{ color: lightMode ? "#222222" : "" }}>Sequelize</h6>
                 </div>
               </div>
             </div>
