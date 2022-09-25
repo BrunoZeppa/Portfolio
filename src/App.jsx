@@ -160,7 +160,7 @@ function App() {
             <div className='about-me-container'>
               <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "About Me" : "Acerca de Mi"}</h3>
               <p style={{ color: lightMode ? "#222222" : "" }}>
-                {changeLanguage ? "I am passionate about developing, creating and innovating and everything related to technology. I am a cheerful and ambitious man of continuous learning. I enjoy solving problems and working in team." : "Me apasiona desarrollar, crear e innovar y todo lo relacionado con la tecnología. Soy un hombre alegre y ambicioso de continuo aprendizaje. Disfruto resolviendo problemas y trabajando en equipo."}
+                {changeLanguage ? "Hello! My name is Bruno. I'm a professional web developer, and I'm leader in all my projects. I'm passionate about creating, innovating and developing technology to solve current problems in the industry. I am very curious about artificial intelligence and data science to create unique products that improve the customers lives." : " ¡Hola! Me llamo Bruno. Soy un desarrollador web profesional, y soy líder en todos mis proyectos. Me apasiona crear, innovar y desarrollar tecnología para resolver los problemas actuales de la industria. Siento mucha curiosidad por la intligencia artificial y la ciencia de datos para crear productos únicos que mejoren la vida de los clientes"}
               </p>
               <div className='slmd'>
                 <a href="https://github.com/BrunoZeppa"><b style={{ color: lightMode ? "#222222" : "" }}><i className="fa-brands fa-github"></i></b></a>
