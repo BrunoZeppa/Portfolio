@@ -1,5 +1,5 @@
 import './App.css'
-import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg } from "./images";
+import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg, AcademloMeals, CheckInSistem } from "./images";
 import { useState } from 'react';
 import { BrunoZeppaEngCv, BrunoZeppaEspCv } from "./documents";
 import { useRef } from 'react';
@@ -27,6 +27,7 @@ function App() {
   const changeCv = () => {
     if (changeLanguage === true) {
       return BrunoZeppaEngCv
+
     } else if (changeLanguage === false) {
       return BrunoZeppaEspCv
     }
@@ -38,6 +39,27 @@ function App() {
     } else if (changeLanguage === false) {
       return "Bruno Zeppa CV ESP"
     }
+  }
+
+  const changeLanguageEng = () => {
+    setChangeLanguage(true)
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'English set as your language',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
+  const changeLanguageSpn = () => {
+    setChangeLanguage(false)
+    Swal.fire({
+      position: 'top-end',
+      icon: 'Exito',
+      title: 'Has cambiado el idioma a español',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 
 
@@ -72,8 +94,8 @@ function App() {
       return (
         <>
           <ul className="images-list" style={listStyles}>
-            <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
-            <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
+            <li> <a href="https://github.com/BrunoZeppa/AcademloMeals"><img src={AcademloMeals} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
+            <li> <a href="https://github.com/BrunoZeppa/EmployeesAssistData"><img src={CheckInSistem} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
           </ul>
@@ -134,8 +156,8 @@ function App() {
           <div className='setings-container'>
             <button onClick={() => setLightMode(themeToggler)} style={{ backgroundColor: lightMode ? "" : "#222222", color: lightMode ? "" : "white" }}>{lightMode ? <i className="fa-solid fa-moon"></i> : <i className="fa-solid fa-sun"></i>}</button>
             <div className='language-container'>
-              <img src={SpainFlag} alt="" onClick={() => setChangeLanguage(false)} />
-              <img src={UKFlag} alt="" onClick={() => setChangeLanguage(true)} />
+              <img src={SpainFlag} alt="" onClick={changeLanguageSpn} />
+              <img src={UKFlag} alt="" onClick={changeLanguageEng} />
             </div>
           </div>
           <div className='banner-container-info'>
