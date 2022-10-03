@@ -55,7 +55,7 @@ function App() {
     setChangeLanguage(false)
     Swal.fire({
       position: 'top-end',
-      icon: 'Exito',
+      icon: 'success',
       title: 'Has cambiado el idioma a español',
       showConfirmButton: false,
       timer: 1500
