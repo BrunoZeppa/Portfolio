@@ -96,7 +96,7 @@ function App() {
           <ul className="images-list" style={listStyles}>
             <li> <a href="https://github.com/BrunoZeppa/Hotel-bookings-server"><img src={NFTsMarketPlace} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
             <li> <a href="https://github.com/BrunoZeppa/AcademloMeals"><img src={AcademloMeals} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
-            <li> <a href="https://github.com/BrunoZeppa/EmployeesAssistData"><img src={CheckInSistem} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
+            <li> <a href="https://github.com/BrunoZeppa/EmployeesAssistData/tree/main/express-basics"><img src={CheckInSistem} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
           </ul>
         </>
