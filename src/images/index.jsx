@@ -20,3 +20,4 @@ export { default as Rocket } from './rocket.svg';
 export { default as ComingSoonEngImg } from './coming-soon-eng.png';
 export { default as CheckInSistem } from './check_in_projetc.png';
 export { default as AcademloMeals } from './academlo-meals.png';
+export { default as NFTsMarketPlace } from './nfts-market-place.png';

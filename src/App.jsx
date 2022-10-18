@@ -1,5 +1,5 @@
 import './App.css'
-import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg, AcademloMeals, CheckInSistem } from "./images";
+import { HTMLImg, CSSImg, ReactImg, JSImg, NodeImg, MaterialUImg, ReduxImg, bootstrapImg, MySQLImg, ECommerceImg, RickMortyImg, CRUDImg, PokedexImg, TrainifyImg, SpainFlag, UKFlag, ComingSoonEspImg, Rocket, ComingSoonEngImg, AcademloMeals, CheckInSistem, NFTsMarketPlace } from "./images";
 import { useState } from 'react';
 import { BrunoZeppaEngCv, BrunoZeppaEspCv } from "./documents";
 import { useRef } from 'react';
@@ -13,7 +13,7 @@ function App() {
 
   const [lightMode, setLightMode] = useState(false)
   const [currentImage, setCurrentImage] = useState(1);
-  const [info, setInfo] = useState("react")
+  const [info, setInfo] = useState("fullstack")
   const [changeLanguage, setChangeLanguage] = useState(false)
 
   const percent = 100 / 4;
@@ -78,11 +78,11 @@ function App() {
           </ul>
         </>
       );
-    } else if (info === "js") {
+    } else if (info === "fullstack") {
       return (
         <>
           <ul className="images-list" style={listStyles}>
-            <li> <a href="https://trainifymx.netlify.app/"><img src={TrainifyImg} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
+            <li> <a href="https://charming-faloodeh-80ea08.netlify.app/"><img src={TrainifyImg} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
@@ -94,9 +94,9 @@ function App() {
       return (
         <>
           <ul className="images-list" style={listStyles}>
+            <li> <a href="https://github.com/BrunoZeppa/Hotel-bookings-server"><img src={NFTsMarketPlace} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
             <li> <a href="https://github.com/BrunoZeppa/AcademloMeals"><img src={AcademloMeals} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
             <li> <a href="https://github.com/BrunoZeppa/EmployeesAssistData"><img src={CheckInSistem} alt="" /><button className='see-project-btn'>{changeLanguage ? "See project" : "ver proyecto"}</button></a></li>
-            <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
             <li> <img src={changeLanguage ? ComingSoonEngImg : ComingSoonEspImg} alt="" /></li>
           </ul>
         </>
@@ -168,7 +168,7 @@ function App() {
             </div>
           </div>
           <a className='cv-button' href={changeCv()} download={changeCvTitle()}>
-            <p>{changeLanguage ? "download my Cv" : "descarga mi CV"}</p>
+            <p>{changeLanguage ? "download my resume" : "descarga mi CV"}</p>
             <img src={Rocket} className="rocket" alt="" />
           </a>
           <span className='span1' style={{ color: lightMode ? "#fff" : "#222222", background: lightMode ? " linear-gradient(90deg, #9fa0a5 , #f2f2f2)" : "" }}>.</span>
@@ -247,17 +247,21 @@ function App() {
             <h3 style={{ color: lightMode ? "Black" : "" }}>{changeLanguage ? "Portfolio" : "Portafolio"}</h3>
             <div className='portfolio-options-container'>
               <button onClick={() => {
+                setInfo("fullstack")
+                setCurrentImage(1)
+              }} style={{ color: info == "fullstack" ? "#f40303" : "" }}
+              >FULLSTACK</button>
+              <button onClick={() => {
                 setInfo("react")
                 setCurrentImage(1)
-              }}>REACT</button>
-              <button onClick={() => {
-                setInfo("js")
-                setCurrentImage(1)
-              }}>JAVASCRIPT</button>
+              }} style={{ color: info == "react" ? "#03e9f4" : "" }}
+              >REACT</button>
               <button onClick={() => {
                 setInfo("node")
                 setCurrentImage(1)
-              }}>NODE</button>
+              }} style={{ color: info == "node" ? "#8cc84b" : "" }}
+
+              >NODE</button>
             </div>
             <div className='portfolio-carousel'>
 
